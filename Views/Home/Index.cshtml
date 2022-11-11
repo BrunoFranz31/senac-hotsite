@@ -1,0 +1,177 @@
+﻿@model Interesse
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="~/css/site.css">
+
+@{
+    ViewData["Title"] = "Hotsite";
+}
+<div class="row mt-3">
+    <div class="col-6">
+        <h1>Iniciativa Saúde da Cidade</h1>
+        <p>
+            Texto sobre vida saudável: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+            at
+            vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+        <p>
+            Texto sobre vida iniciativa: Lorem ipsum dolor sit amet et delectus accommodare his consul copiosae legendos
+            at
+            vix ad putent delectus delicata usu. Vidit dissentiet eos cu eum an brute copiosae hendrerit.
+        </p>
+    </div>
+
+    <div class="col-6">
+        <img src="~/image/foto1.jpg" style="height: 300px; width: 600px;">
+    </div>
+
+</div>
+
+<div class="row mt-3">
+    <div class="col-6 border border-dark">
+        <h2>Entre em contato!:</h2>
+        <p>Nos mande uma mensagem e fique por dentro de nossos eventos</p>
+
+        <form method="POST" id="frmCadastro">
+            <div class="row">
+                <div class="col-1">
+                    <label asp-for="Nome">Nome:</label>
+                </div>
+                <div class="col-10">
+                    <br>
+                    <input asp-for="Nome" id="nome" required/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                    <label asp-for="Email">Email:</label>
+                </div>
+                <div class="col-10">
+                    <br>
+                    <input asp-for="Email" id="email" required/>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-1">
+                <label asp-for="Mensagem">Mensagem (opcional):</label>
+            </div>
+            <div class="col-10">
+                <br>
+                <br>
+                <textarea asp-for="Mensagem" id="msg" required></textarea>
+                </div>
+            <div>
+                <input type="submit" id="botao" value="Enviar" />
+            </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="col-2 text-center">
+        <figure>
+            <img src="~/image/agenda1.jpg" style="height: 100px; width: 100px;">
+            <figcaption>
+                <a href="#" data-toggle="modal" data-target="#Agenda">Agenda de eventos</a>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-2 text-center">
+        <figure>
+            <img src="~/image/vida1.jpg" style="height: 100px; width: 100px;">
+            <figcaption>
+                <a href="#" data-toggle="modal" data-target="#Dicas">Dicas de vida saudável</a>
+            </figcaption>
+        </figure>
+    </div>
+    <div class="col-2 text-center">
+        <figure>
+            <img src="~/image/evento1.jpg" style="height: 100px; width: 100px;">
+            <figcaption>
+                <a href="#" data-toggle="modal" data-target="#Apoiadores">Apoiadores</a>
+            </figcaption>
+        </figure>
+    </div>
+</div>
+
+<div class="modal fade" id="Agenda" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Agenda</h5>
+            </div>
+            <div class="modal-body">
+                01//2022 - Evento 1 <br>
+                Pellentesque dignissim nulla risus <br>
+                at vestibulum nibh interdum nec.
+                <br><br>
+                11/11/2022 - Evento 2 <br>
+                Pellentesque dignissim nulla risus <br>
+                at vestibulum nibh interdum nec.
+                <br><br>
+                03/12/2022 - Evento 3 <br>
+                Pellentesque dignissim nulla risus <br>
+                at vestibulum nibh interdum nec.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Dicas" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Dicas de vida saudável</h5>
+            </div>
+            <div class="modal-body">
+                Pellentesque dignissim nulla risus
+                <br>
+                at vestibulum nibh interdum nec.
+                <br>
+                Pellentesque dignissim nulla risus
+                <br>
+                at vestibulum nibh interdum nec.
+                <br><br>
+                Pellentesque dignissim nulla risus
+                <br>
+                at vestibulum nibh interdum nec.
+                <br>
+                Pellentesque dignissim nulla risus
+                <br>
+                at vestibulum nibh interdum nec.
+                <br><br>
+                Pellentesque dignissim nulla risus
+                <br>
+                Pellentesque dignissim nulla risus
+                <br>
+                at vestibulum nibh interdum nec.
+                <br>
+                at vestibulum nibh interdum nec.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="Apoiadores" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5>Apoiadores</h5>
+            </div>
+            <div class="modal-body">
+                <img src="~/image/file.png" style="height: 70px; width: 70px;" alt="Logo">
+                <p>Empresa 1</p>
+                <p>Lorem ipsum dolor sit amet <br>
+                    consectetur adipiscing elit.</p>
+                <br><br>
+                <img src="~/image/file.png" style="height: 70px; width: 70px;" alt="Logo">
+                <p>Empresa 2</p>
+                <p>Lorem ipsum dolor sit amet <br>
+                    consectetur adipiscing elit.</p>
+                <br><br>
+                <img src="~/image/file.png" style="height: 70px; width: 70px;" alt="Logo">
+                <p>Empresa 3</p>
+                <p>Lorem ipsum dolor sit amet <br>
+                    consectetur adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+</div>
